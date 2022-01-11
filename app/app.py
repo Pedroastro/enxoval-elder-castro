@@ -29,8 +29,10 @@ def index():
         # Check if amount inputed at home page is float
         try:
             amount = float(request.form.get("amount"))
+            if amount < 0:
+                return apology("Por favor digite um valor válido")
         except:
-            return apology("Por favor digite um valor valido")
+            return apology("Por favor digite um valor válido")
         preference_data = {
             "back_urls": {
                 "success": "{}feedback".format(DOMAIN),
