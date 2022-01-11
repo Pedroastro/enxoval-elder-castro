@@ -1,0 +1,166 @@
+{% extends "layout.html" %}
+
+{% block title%}
+    Enxoval do Elder Castro
+{% endblock%}
+
+{% block main %}
+    <div class="text-center">
+        <h1>Bem-vindo ao enxoval do Élder Castro</h1>
+        <br>
+        <div style="max-width: 20vw; height: auto;" class="mx-auto d-block">
+            <img src="static/IMG_4261.jpeg" alt="Foto do Elder Castro" class="img-fluid" width="3024" height="4032">
+        </div>
+        <a href="https://noticias-br.aigrejadejesuscristo.org/artigo/programa-mission%C3%A1rio">O que é servir uma missão?</a>
+        <br>
+        <br>
+        <form method="post" class="start-50">
+            <label for="amount" class="form-label">Quantia</label>
+            <br>
+            <input type="number" name="amount" id="amount">
+            <button type="submit" class="btn btn-success">Doar</button>
+        </form>
+        <br>
+        <br>
+        <h4 class="start-50">Arrecadado até agora: {{ total_donation }}</h4>
+        <p class="start-50">Todo o dinheiro servirá para custear os itens listados abaixo</p>
+        <div class="progress start-50">
+            <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: {{ (total_donation * 100) / 6686.11 }}%">{{ total_donation }}</div>
+        </div>
+        <p class="start-50">(O MercadoPago cobra uma taxa de 4,99% para Crédito, saldo no Mercado Pago, Mercado Crédito e dinheiro disponível, de 0,99% para Pix e de R$3,49 para Boleto)</p>
+    </div>
+    <div class="table-responsive">
+        <table class="table mx-auto table-success">
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Quantidade</th>
+                    <th>Preço por Unidade</th>
+                    <th>Preço Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Camiseta esportiva</td>
+                    <td>1</td>
+                    <td>41,99</td>
+                    <td>41,99</td>
+                </tr>
+                <tr>
+                    <td>Short esportivo</td>
+                    <td>2</td>
+                    <td>62,93</td>
+                    <td>125,86</td>
+                </tr>
+                <tr>
+                    <td>Tênis esportivo</td>
+                    <td>1</td>
+                    <td>209,93</td>
+                    <td>209,93</td>
+                </tr>
+                <tr>
+                    <td>Camisa Social</td>
+                    <td>10</td>
+                    <td>65</td>
+                    <td>650</td>
+                </tr>
+                <tr>
+                    <td>Calça Social</td>
+                    <td>6</td>
+                    <td>127,73</td>
+                    <td>766,4</td>
+                </tr>
+                <tr>
+                    <td>Gravata Social</td>
+                    <td>3</td>
+                    <td>33,52</td>
+                    <td>100,55</td>
+                </tr>
+                <tr>
+                    <td>Sapato Social</td>
+                    <td>4</td>
+                    <td>299,95</td>
+                    <td>1199,8</td>
+                </tr>
+                <tr>
+                    <td>Cinto Social</td>
+                    <td>2</td>
+                    <td>79,9</td>
+                    <td>159,8</td>
+                </tr>
+                <tr>
+                    <td>Alicate para cuidado das mãos e pés</td>
+                    <td>1</td>
+                    <td>28,9</td>
+                    <td>28,9</td>
+                </tr>
+                <tr>
+                    <td>Pinça para cuidado das mãos e pés</td>
+                    <td>1</td>
+                    <td>12,9</td>
+                    <td>12,9</td>
+                </tr>
+                <tr>
+                    <td>Cortador de unha</td>
+                    <td>1</td>
+                    <td>9,9</td>
+                    <td>9,9</td>
+                </tr>
+                <tr>
+                    <td>Lixa para unha</td>
+                    <td>12</td>
+                    <td>0,5825</td>
+                    <td>6,99</td>
+                </tr>
+                <tr>
+                    <td>Escova de Cabelo</td>
+                    <td>1</td>
+                    <td>16,9</td>
+                    <td>16,9</td>
+                </tr>
+                <tr>
+                    <td>Máquina para corte de Cabelo</td>
+                    <td>1</td>
+                    <td>429</td>
+                    <td>429</td>
+                </tr>
+                <tr>
+                    <td>Máquina para corte de Cabelo (acabamento)</td>
+                    <td>1</td>
+                    <td>299</td>
+                    <td>299</td>
+                </tr>
+                <tr>
+                    <td>Óleo para manutenção de máquinas</td>
+                    <td>1</td>
+                    <td>8,19</td>
+                    <td>8,19</td>
+                </tr>
+                <tr>
+                    <td>Garments (superior e inferior)</td>
+                    <td>10</td>
+                    <td>12</td>
+                    <td>120</td>
+                </tr>
+                <tr>
+                    <td>Produtos farmaceuticos</td>
+                    <td>1</td>
+                    <td>200</td>
+                    <td>200</td>
+                </tr>
+                <tr>
+                    <td>Óleos doTerra e Difusor</td>
+                    <td>13</td>
+                    <td>115,38</td>
+                    <td>1500</td>
+                </tr>
+                <tr>
+                    <td>Câmera Fotografica</td>
+                    <td>1</td>
+                    <td>800</td>
+                    <td>800</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

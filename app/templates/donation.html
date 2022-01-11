@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+        <meta name="description" content="Processamento de doação">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+        <title>Doação</title>
+    </head>
+    <body class="bg-primary bg-gradient text-white" style="background-repeat: no-repeat">
+        <script src="https://sdk.mercadopago.com/js/v2"></script>
+        <script>
+            // Add the SDK credentials
+            const mp = new MercadoPago('APP_USR-2d578125-28fd-42cc-81ea-2dd895b33c91', {
+                locale: 'pt-BR'
+            });
+            
+            // Initialize the checkout
+            const checkout = mp.checkout({
+                preference: {
+                    id: "{{ preference_id }}"
+                },
+                autoOpen: true,
+            });
+        </script>
+        <div class="position-absolute top-50 start-50 translate-middle text-center">
+            <h1>Mercado Pago</h1>
+            <a href="/" class="link-light">Voltar para página principal</a>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    </body>
+</html>
