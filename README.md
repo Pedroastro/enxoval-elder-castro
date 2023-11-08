@@ -1,2 +1,2 @@
 # enxoval-elder-castro
-The code for my crowdfunding website
+This is a repository that contains the code for my Crowdfunding website I made for my missionary service. It uses the Mercado Pago API that allowed people to donate directly to me with minimal transaction fees. The website included some links about the service that I did, a picture of me, a donation amount box, a donate button, a table with the objects that I needed and it also had a progress bar with the amount donated to indicate how close the overall donations were from the amount needed.
